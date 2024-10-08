@@ -19,9 +19,9 @@ class Solution:
                 return
             # go through every number (key)
             for n in count:
-                if count[n] > 0: # we have enough values
+                if count[n] > 0:  # we have enough values
                     perm.append(n)
-                    count[n] -= 1 # decrease count
+                    count[n] -= 1  # decrease count
                     # call recursive function:
                     dfs()
                     # clean up increase count, remove value from perm (go up the tree)
