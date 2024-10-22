@@ -8,3 +8,5 @@ Content:
 4. Binary Search
 5. Stacks
 6. Greedy Algorithms
+7. Breath-first Search (BFS)
+8. Depth-first Search (DFS)
