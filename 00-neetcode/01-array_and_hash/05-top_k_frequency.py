@@ -32,34 +32,6 @@ class Solution:
 # Complexity: O(n) - use of dictionary and array, but size n
 
 
-# brute force
-# class Solution:
-#     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-#         res = []
-#         # create hashmap
-#         numsFrequency = defaultdict(int)
-
-#         # define frecuency of elements (element:frequency)
-#         for num in nums:
-#             numsFrequency[num] += 1
-#         # loop hashmap to find the k element
-#         while k > 0:
-#             mostFrequentElement = 0
-#             mostFrequentValue = 0
-#             # search most frequent, store key and value
-#             for element, frequency in numsFrequency.items():
-#                 if frequency >= mostFrequentValue:
-#                     mostFrequentElement = element
-#                     mostFrequentValue = frequency
-#             res.append(mostFrequentElement)
-#             del numsFrequency[mostFrequentElement]
-#             # k - 1 until k = 0
-#             k -= 1
-#         return res
-# Complexity
-# Time: O(n^2) - loop over the list of nums and the hashmap to find the most frequent element
-# Space: O(n) - hashmap to store the frequencies
-
 solution = Solution()
 nums = [1, 2, 2, 3, 3, 3]
 k = 2

@@ -6,15 +6,17 @@ from typing import List
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        result = defaultdict(list)
+        result = defaultdict(list)  # save the freq of the words in strs
 
         for word in strs:
             count = [0] * 26  # a-z
 
+            # create the frequency hashmap
             for letter in word:
                 count[ord(letter) - ord("a")] += 1
 
-            result[tuple(count)].append(word)
+            # append to array
+            result[tuple(count)].append(word)  # touple, to make it immutable
 
         return list(result.values())
 
