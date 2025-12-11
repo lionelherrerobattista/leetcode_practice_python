@@ -8,9 +8,9 @@ class Solution:
         longest_sequence = 0
 
         # check sequence
-        for num in nums_set:
+        for num in nums_set:  # delete duplicates, improve time
             # search for the start of a sequence
-            # (if no previous number exist doesn't exist)
+            # no left neighbor
             if (num - 1) not in nums_set:
                 # start of a sequence
                 sequence_count = 1
